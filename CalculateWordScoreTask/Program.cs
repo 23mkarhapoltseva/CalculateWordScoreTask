@@ -5,18 +5,28 @@
         static void Main(string[] args)
         {
             string input;
+            int total = 0;
             Console.Write("Enter a word or phrase to calculate the score: ");
             input = Console.ReadLine ();
             string onlyLetters = removeNonLetters(input);
+            foreach(char l in onlyLetters)
+            {
+               if(char.IsAscii(l))
+               {
+                    total += (int)l;
+               }
+               
 
-            // Your task is to calculate the score of the word or phrase
-            // convert each letter to its ascii value and sum them up
+            }
+            Console.WriteLine(total);
+
+            // Your task is to calculate the score of the word hemor phrase
+            // convert each letter to its ascii value and sum t up
             // print the score
-            // Write your code here
             // Show your evidence by testing with your full name as an input
         }
 
-        // This method removes all non-letter characters from the input string
+     // This method removes all non-letter characters from the input string
 
         static string removeNonLetters(string input)
         {
